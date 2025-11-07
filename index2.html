@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bavana Sri | Graphic Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3C153B;
+      --accent: #F0C987;
+      --bg: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 10%;
+      background: var(--primary);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* === HERO === */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.8rem;
+      color: var(--primary);
+    }
+
+    .hero-text p {
+      margin-top: 15px;
+      color: #5a2b58;
+      font-size: 1.1rem;
+    }
+
+    .hero img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--accent);
+      box-shadow: 0px 4px 20px rgba(60, 21, 59, 0.3);
+    }
+
+    /* === ABOUT === */
+    #about {
+      padding: 80px 10%;
+      background-color: #fdf9f3;
+    }
+
+    #about h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    #about p {
+      max-width: 700px;
+      color: #4a2750;
+    }
+
+    /* === SERVICES === */
+    #services {
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    #services h2 {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+    }
+
+    .service-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .service {
+      background: #fff;
+      border: 2px solid var(--accent);
+      border-radius: 12px;
+      padding: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .service:hover {
+      background: var(--accent);
+      color: var(--primary);
+      transform: translateY(-5px);
+    }
+
+    /* === WORK === */
+    #work {
+      padding: 80px 10%;
+      background-color: #fdf9f3;
+    }
+
+    #work h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid var(--accent);
+    }
+
+    .project img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .project:hover img {
+      transform: scale(1.05);
+    }
+
+    .project-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(60, 21, 59, 0.8);
+      color: #fff;
+      padding: 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .project:hover .project-info {
+      opacity: 1;
+    }
+
+    /* === CONTACT === */
+    #contact {
+      text-align: center;
+      padding: 80px 10%;
+    }
+
+    #contact h2 {
+      margin-bottom: 20px;
+    }
+
+    #contact a {
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    #contact a:hover {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      background: var(--primary);
+      color: #fff;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero img {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Bavana Sri</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hi, I’m Bavana Sri 👋</h2>
+      <p>I design visuals that bring ideas to life — combining creativity and precision to help brands communicate beautifully.</p>
+    </div>
+    <img src="https://i.postimg.cc/bwFDKmBj/Whats-App-Image-2025-10-25-at-04-19-04.jpg" alt="Bavana Sri Portrait">
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a graphic designer who focuses on crafting what clients truly need — designs that are both effective and visually appealing. I believe in listening carefully, designing thoughtfully, and always delivering work on time. My goal is to help brands express their story through creative, minimal, and professional design solutions.</p>
+  </section>
+
+  <section id="services">
+    <h2>What I Do</h2>
+    <div class="service-container">
+      <div class="service">
+        <h3>Logo Design</h3>
+        <p>Custom brand logos that define your visual identity with elegance and impact.</p>
+      </div>
+      <div class="service">
+        <h3>Social Media Design</h3>
+        <p>Creative and engaging posts that align perfectly with your brand personality.</p>
+      </div>
+      <div class="service">
+        <h3>Poster & Packaging Design</h3>
+        <p>Eye-catching visuals and packaging concepts that make your products stand out.</p>
+      </div>
+      <div class="service">
+        <h3>Motion Graphics</h3>
+        <p>Sleek, dynamic animations that bring your stories and campaigns to life.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Selected Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <img src="https://files.catbox.moe/7sah3f.jpeg" alt="Hit N Run turf">
+        <div class="project-info">
+          <h3>ad - poster</h3>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://files.catbox.moe/rmgxmo.png" alt="Burger">
+        <div class="project-info">
+          <h3>instagram ad</h3>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://files.catbox.moe/e2pbxm.png" alt="Poster">
+        <div class="project-info">
+          <h3>ad-instagram</h3>
+        </div>
+      </div>
+    </div>
+  <div class="project">
+  <img src="https://files.catbox.moe/n1rife.png" alt="Poster">
+  <div class="project-info">
+    <h3>Standard Biryani</h3>
+    <p>Creative ad poster for social media</p>
+  </div>
+</div>
+  </section>
+
+  <section id="contact">
+  <h2>Let’s Work Together</h2>
+  <p>Have a design project in mind? Let’s make it happen.</p>
+
+  <p>Email me at <a href="mailto:bavanasrsivakumar@gmail.com">bavanasrsivakumar@gmail.com</a></p>
+
+  <p>
+    Or reach me on WhatsApp:
+    <a href="https://wa.me/919486838267?text=Hi%20Bavana%2C%20I%27d%20like%20to%20discuss%20a%20design%20project%20with%20you." 
+       target="_blank">Chat with me</a>
+  </p>
+
+  <p>
+    <a href="https://www.linkedin.com/in/bavana-sri-sivakumar-9a025b2bb" target="_blank">LinkedIn</a>
+  </p>
+</section>
+
+
+  <footer>
+    <p>© 2025 Bavana Sri. All rights reserved.</p>
+  </footer>
+</body>
+</html>
